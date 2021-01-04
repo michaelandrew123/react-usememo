@@ -6,8 +6,9 @@ export default function App() {
   const [number, setNumber] = useState(0)
   const [dark, setDark] = useState(false)
   const doubleNumber = useMemo(() => { 
-  return slowFunction(number) 
+    return slowFunction(number) 
   }, [number])
+  
   const themeStyles = useMemo(() => {
     return {
       backgroundColor: dark ? 'black' : 'white',
